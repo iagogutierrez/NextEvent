@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common'
+
 
 @Component({
   selector: 'app-header',
