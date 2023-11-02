@@ -1,35 +1,42 @@
 .site-header {
     background-color: #F0F0F0;
     display: flex;
-    align-items: center;
 }
 
-.headerLogo{
+.headerLogo {
     margin: 0.25rem;
 }
 
 
 .headerPrincipal {
     width: 100%;
-    height: 100%;
     background-color: red;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.headerTop{
-    border-bottom:#000 1px solid;
-    height: 100%;
+.headerTop {
+    border-bottom: #000 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
-.botones{
+.botones {
     background-color: antiquewhite;
-    width: 80%;
     height: 100%;
-
+    display: flex;
+    justify-content: flex-end;
 }
 
 button {
+    gap: 3.875rem;
     margin-right: 20px;
     border-color: transparent;
     background-color: transparent;
+}
+
+.headerBotton {
+    width: 100%;
 }
