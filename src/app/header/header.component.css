@@ -1,5 +1,4 @@
 .site-header {
-    background-color: #F0F0F0;
     display: flex;
 }
 
@@ -10,7 +9,6 @@
 
 .headerPrincipal {
     width: 100%;
-    background-color: red;
     display: flex;
     flex-wrap: wrap;
 }
@@ -24,7 +22,6 @@
 }
 
 .botones {
-    background-color: antiquewhite;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -37,6 +34,19 @@ button {
     background-color: transparent;
 }
 
+
 .headerBotton {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botonUser{
+    --ng-icon__size: 1.5em !important;
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+.botonLupa{
+    --ng-icon__size: 1.5em !important;
 }

@@ -13,6 +13,8 @@ import { NgIconsModule } from '@ng-icons/core';
 import { heroUsers } from '@ng-icons/heroicons/outline';
 import { NgIcon } from '@ng-icons/core';
 
+import { NgIconComponent, provideIcons } from '@ng-icons/core';
+import { heroMagnifyingGlass, heroUser } from '@ng-icons/heroicons/outline';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { NgIcon } from '@ng-icons/core';
     BrowserModule,
     AppRoutingModule,
     [NgOptimizedImage],
-    NgIconsModule.withIcons({ heroUsers }),
+    NgIconsModule.withIcons({ heroMagnifyingGlass, heroUser }),
     
   ],
   providers: [],
