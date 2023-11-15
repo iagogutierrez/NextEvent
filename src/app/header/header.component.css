@@ -1,5 +1,6 @@
 .site-header {
     display: flex;
+    box-shadow: inset 1px #000;
 }
 
 .headerLogo {
@@ -25,10 +26,13 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    list-style: none;
+    
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 
-button {
-    gap: 3.875rem;
+.nav-item {
     margin-right: 20px;
     border-color: transparent;
     background-color: transparent;
