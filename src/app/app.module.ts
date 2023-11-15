@@ -19,11 +19,20 @@ import { heroMagnifyingGlass, heroUser } from '@ng-icons/heroicons/outline';
 import { PatrocinateComponent } from './web/patrocinate/patrocinate.component';
 import { SoporteComponent } from './web/soporte/soporte.component';
 
-const appRoutes : Routes = [
-  {path:'', component: InicioComponent},
-  {path:'calendario', component: CalendarComponent},
-  {path:'patrocinate', component: PatrocinateComponent},
-  {path:'soporte', component: SoporteComponent},
+import { FloatLabelType, MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+const appRoutes: Routes = [
+  { path: '', component: InicioComponent },
+  { path: 'calendario', component: CalendarComponent },
+  { path: 'patrocinate', component: PatrocinateComponent },
+  { path: 'soporte', component: SoporteComponent },
 ]
 
 @NgModule({
@@ -42,7 +51,14 @@ const appRoutes : Routes = [
     RouterModule.forRoot(appRoutes),
     [NgOptimizedImage],
     NgIconsModule.withIcons({ heroMagnifyingGlass, heroUser }),
-    
+    FormsModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
