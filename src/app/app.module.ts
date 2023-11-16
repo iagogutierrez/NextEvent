@@ -11,22 +11,15 @@ import { InicioComponent } from './web/inicio/inicio.component';
 import { CalendarComponent } from './web/calendar/calendar.component';
 
 import { NgIconsModule } from '@ng-icons/core';
-import { heroUsers } from '@ng-icons/heroicons/outline';
-import { NgIcon } from '@ng-icons/core';
-
-import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroMagnifyingGlass, heroUser } from '@ng-icons/heroicons/outline';
 import { PatrocinateComponent } from './web/patrocinate/patrocinate.component';
 import { SoporteComponent } from './web/soporte/soporte.component';
 
 import { FloatLabelType, MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 const appRoutes: Routes = [
   { path: '', component: InicioComponent },
@@ -53,12 +46,10 @@ const appRoutes: Routes = [
     NgIconsModule.withIcons({ heroMagnifyingGlass, heroUser }),
     FormsModule,
     ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyBootstrapModule,
     MatCheckboxModule,
-    MatRadioModule,
     MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,18 +10,14 @@
         </p>
     </div>
     <div class="formulario">
-        <mat-form-field [floatLabel]="getFloatLabelValue()">
-            <mat-label>Nombre</mat-label>
-            <input matInput placeholder="Simple placeholder" required>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Input</mat-label>
-            <input matInput>
-          </mat-form-field>
-        <mat-form-field>
-            <mat-label></mat-label>
-            <input matInput required>
-        </mat-form-field>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <formly-form [form]="form" [model]="model" [fields]="fields" > </formly-form>
+
+            <button type="submit" color="primary" mat-raised-button>Submit</button>
+
+            <button type="reset" color="warm" mat-raised-button>Reset</button>
+
+        </form>
     </div>
     <!--
     
