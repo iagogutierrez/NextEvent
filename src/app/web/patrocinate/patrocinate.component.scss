@@ -1,0 +1,40 @@
+.bodyPatrocinate {
+    display: flex;
+    gap: 2rem;
+}
+.informacion {
+    min-width: none;
+    max-width: 30%;
+}
+
+.formulario {
+}
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    padding: 10px;
+}
+
+form .mat-raised-button {
+    margin-right: 8px;
+}
+
+formly-form {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+    font: inherit;
+    text-align: center;
+    color: currentColor;
+}
+
+.example-form {
+    min-width: 150px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

@@ -2,12 +2,12 @@
     "eventos": [
         {
             "id": "1",
-            "nombre": "Festival de Arte Urbano",
+            "nombre_evento": "Festival de Arte Urbano",
             "fecha_inicio": "2023-06-15T10:00:00",
             "fecha_fin": "2023-06-17T22:00:00",
             "descripcion": "Evento que celebra la creatividad del arte urbano con exhibiciones, música en vivo y talleres interactivos.",
             "ubicacion": {
-                "nombre": "Plaza de las Artes",
+                "nombre_ubicacion": "Plaza de las Artes",
                 "direccion": "Calle de los Grafitis, Sevilla, España",
                 "latitud": 37.393177,
                 "longitud": -5.983311
@@ -28,20 +28,18 @@
         },
         {
             "id": "2",
-            "nombre": "Concierto en Vivo: Noches de Flamenco",
+            "nombre_evento": "Concierto en Vivo: Noches de Flamenco",
             "fecha_inicio": "2023-07-20T19:30:00",
             "fecha_fin": "2023-07-20T22:30:00",
             "descripcion": "Disfruta de una noche llena de pasión y ritmo con los mejores artistas de flamenco de la región.",
             "ubicacion": {
-                "nombre": "Teatro Flamenco Sevilla",
-                "direccion": "Calle del Flamenco, Sevilla, España",
-                "latitud": 37.390091,
-                "longitud": -5.984459
+                "nombre_ubicacion": "Teatro Flamenco Sevilla",
+                "enlace": "https://maps.app.goo.gl/imHg4EsHFhbwMmWbA"
             },
             "tipo": "Concierto",
             "organizador": "Promociones Musicales Andalucía",
             "pagina_web": "https://www.nochesdeflamenco.com",
-            "precio": "15€ por entrada",
+            "precio": "15",
             "contacto": {
                 "email": "contacto@flamencoandaluza.com",
                 "telefono": "+34 111 222 333",
@@ -54,12 +52,12 @@
         },
         {
             "id": "3",
-            "nombre": "Exposición de Arte Contemporáneo",
+            "nombre_evento": "Exposición de Arte Contemporáneo",
             "fecha_inicio": "2023-09-10T11:00:00",
             "fecha_fin": "2023-09-30T18:00:00",
             "descripcion": "Explora las obras más recientes de artistas contemporáneos locales e internacionales en esta exposición única.",
             "ubicacion": {
-                "nombre": "Galería de Arte Moderno",
+                "nombre_ubicacion": "Galería de Arte Moderno",
                 "direccion": "Calle del Arte, Sevilla, España",
                 "latitud": 37.391249,
                 "longitud": -5.986189
@@ -80,12 +78,12 @@
         },
         {
             "id": "4",
-            "nombre": "Feria Gastronómica Sabores de Sevilla",
+            "nombre_evento": "Feria Gastronómica Sabores de Sevilla",
             "fecha_inicio": "2023-08-05T12:00:00",
             "fecha_fin": "2023-08-07T22:00:00",
             "descripcion": "Una feria que ofrece lo mejor de la gastronomía sevillana con degustaciones, demostraciones culinarias y música en vivo.",
             "ubicacion": {
-                "nombre": "Parque de Sabores",
+                "nombre_ubicacion": "Parque de Sabores",
                 "direccion": "Avenida de la Gastronomía, Sevilla, España",
                 "latitud": 37.391581,
                 "longitud": -5.986914
@@ -93,7 +91,7 @@
             "tipo": "Feria Gastronómica",
             "organizador": "Asociación de Chefs de Sevilla",
             "pagina_web": "https://www.saboresdesevilla.com",
-            "precio": "Entrada gratuita, algunas degustaciones con coste",
+            "precio": "Entrada gratuita",
             "contacto": {
                 "email": "info@saboresdesevilla.com",
                 "telefono": "+34 333 444 555",
@@ -106,12 +104,12 @@
         },
         {
             "id": "5",
-            "nombre": "Exposición de Arte Clásico",
+            "nombre_evento": "Exposición de Arte Clásico",
             "fecha_inicio": "2023-09-01T09:00:00",
             "fecha_fin": "2023-09-30T18:00:00",
             "descripcion": "Una exposición que muestra obras de artistas clásicos reconocidos a nivel internacional.",
             "ubicacion": {
-                "nombre": "Museo de Arte Clásico",
+                "nombre_ubicacion": "Museo de Arte Clásico",
                 "direccion": "Calle de los Maestros, Sevilla, España",
                 "latitud": 37.390873,
                 "longitud": -5.984111
@@ -132,12 +130,12 @@
         },
         {
             "id": "6",
-            "nombre": "Conferencia de Innovación Tecnológica",
+            "nombre_evento": "Conferencia de Innovación Tecnológica",
             "fecha_inicio": "2023-10-10T14:00:00",
             "fecha_fin": "2023-10-10T18:00:00",
             "descripcion": "Una conferencia que explora las últimas tendencias e innovaciones en tecnología.",
             "ubicacion": {
-                "nombre": "Centro de Convenciones Sevilla",
+                "nombre_ubicacion": "Centro de Convenciones Sevilla",
                 "direccion": "Avenida de la Tecnología, Sevilla, España",
                 "latitud": 37.394288,
                 "longitud": -5.985031
@@ -145,7 +143,7 @@
             "tipo": "Conferencia",
             "organizador": "Asociación de Tecnología Sevilla",
             "pagina_web": "https://www.conferenciainnovacion.com",
-            "precio": "Entrada con registro previo",
+            "precio": "Entrada gratuita",
             "contacto": {
                 "email": "info@innovaciontecnologica.com",
                 "telefono": "+34 999 000 111",
@@ -158,12 +156,12 @@
         },
         {
             "id": "7",
-            "nombre": "Teatro en el Parque",
+            "nombre_evento": "Teatro en el Parque",
             "fecha_inicio": "2023-11-01T18:30:00",
             "fecha_fin": "2023-11-01T21:00:00",
             "descripcion": "Una presentación teatral al aire libre que combina comedia, drama y música en un entorno natural.",
             "ubicacion": {
-                "nombre": "Parque Teatral",
+                "nombre_ubicacion": "Parque Teatral",
                 "direccion": "Calle del Teatro, Sevilla, España",
                 "latitud": 37.395129,
                 "longitud": -5.982742
@@ -171,7 +169,7 @@
             "tipo": "Teatro al Aire Libre",
             "organizador": "Compañía Teatral Sevilla",
             "pagina_web": "https://www.teatroenelparque.com",
-            "precio": "Entrada gratuita, donaciones bienvenidas",
+            "precio": "Entrada gratuita",
             "contacto": {
                 "email": "info@teatroenelparque.com",
                 "telefono": "+34 222 333 444",
@@ -184,12 +182,12 @@
         },
         {
             "id": "8",
-            "nombre": "Festival de Cine Independiente",
+            "nombre_evento": "Festival de Cine Independiente",
             "fecha_inicio": "2023-12-05T11:00:00",
             "fecha_fin": "2023-12-10T23:00:00",
             "descripcion": "Un festival que destaca películas independientes y ofrece proyecciones, charlas y eventos especiales.",
             "ubicacion": {
-                "nombre": "Cine Independiente Sevilla",
+                "nombre_ubicacion": "Cine Independiente Sevilla",
                 "direccion": "Calle del Cine, Sevilla, España",
                 "latitud": 37.393754,
                 "longitud": -5.984602
@@ -197,7 +195,7 @@
             "tipo": "Festival de Cine",
             "organizador": "Asociación de Cine Independiente Sevilla",
             "pagina_web": "https://www.festivaldecineindependiente.com",
-            "precio": "Varía según eventos",
+            "precio": "15",
             "contacto": {
                 "email": "info@cineindependiente.com",
                 "telefono": "+34 333 444 555",
@@ -210,12 +208,12 @@
         },
         {
             "id": "9",
-            "nombre": "Carrera Benéfica por la Igualdad",
+            "nombre_evento": "Carrera Benéfica por la Igualdad",
             "fecha_inicio": "2024-01-15T08:00:00",
             "fecha_fin": "2024-01-15T12:00:00",
             "descripcion": "Una carrera de 5 km que recauda fondos para promover la igualdad de género en la sociedad.",
             "ubicacion": {
-                "nombre": "Parque por la Igualdad",
+                "nombre_ubicacion": "Parque por la Igualdad",
                 "direccion": "Avenida de la Igualdad, Sevilla, España",
                 "latitud": 37.394890,
                 "longitud": -5.983356
@@ -223,7 +221,7 @@
             "tipo": "Carrera Benéfica",
             "organizador": "Fundación por la Igualdad Sevilla",
             "pagina_web": "https://www.carrerabeneficaigualdad.com",
-            "precio": "Inscripción con donación",
+            "precio": "Entrada gratuita",
             "contacto": {
                 "email": "info@carrerabeneficaigualdad.com",
                 "telefono": "+34 444 555 666",
@@ -236,12 +234,12 @@
         },
         {
             "id": "10",
-            "nombre": "Feria de Artesanía y Tradiciones",
+            "nombre_evento": "Feria de Artesanía y Tradiciones",
             "fecha_inicio": "2024-02-10T10:00:00",
             "fecha_fin": "2024-02-12T20:00:00",
             "descripcion": "Una feria que exhibe la artesanía local y las tradiciones culturales de la región.",
             "ubicacion": {
-                "nombre": "Recinto Ferial de Artesanía",
+                "nombre_ubicacion": "Recinto Ferial de Artesanía",
                 "direccion": "Calle de las Tradiciones, Sevilla, España",
                 "latitud": 37.393216,
                 "longitud": -5.985537
@@ -262,12 +260,12 @@
         },
         {
             "id": "11",
-            "nombre": "Semana Cultural Hispano-Francesa",
+            "nombre_evento": "Semana Cultural Hispano-Francesa",
             "fecha_inicio": "2024-03-05T10:00:00",
             "fecha_fin": "2024-03-10T22:00:00",
             "descripcion": "Una semana de actividades culturales que celebra la herencia hispano-francesa con exposiciones, charlas y gastronomía.",
             "ubicacion": {
-              "nombre": "Centro Cultural Franco-Hispánico",
+              "nombre_ubicacion": "Centro Cultural Franco-Hispánico",
               "direccion": "Calle de la Amistad, Sevilla, España",
               "latitud": 37.392214,
               "longitud": -5.986790
@@ -275,7 +273,7 @@
             "tipo": "Semana Cultural",
             "organizador": "Asociación Hispano-Francesa Sevilla",
             "pagina_web": "https://www.semanaculturalhf.com",
-            "precio": "Varía según eventos",
+            "precio": "20",
             "contacto": {
               "email": "info@semanaculturalhf.com",
               "telefono": "+34 666 777 888",
@@ -288,12 +286,12 @@
           },
           {
             "id": "12",
-            "nombre": "Festival de la Ciencia y Tecnología",
+            "nombre_evento": "Festival de la Ciencia y Tecnología",
             "fecha_inicio": "2024-04-20T09:00:00",
             "fecha_fin": "2024-04-25T18:00:00",
             "descripcion": "Un festival que promueve la ciencia y la tecnología con exposiciones interactivas, conferencias y experimentos.",
             "ubicacion": {
-              "nombre": "Centro de Ciencia y Tecnología Sevilla",
+              "nombre_ubicacion": "Centro de Ciencia y Tecnología Sevilla",
               "direccion": "Avenida de la Ciencia, Sevilla, España",
               "latitud": 37.394529,
               "longitud": -5.984668
@@ -314,12 +312,12 @@
           },
           {
             "id": "13",
-            "nombre": "Exposición de Arte Moderno: Vanguardias",
+            "nombre_evento": "Exposición de Arte Moderno: Vanguardias",
             "fecha_inicio": "2024-05-10T11:00:00",
             "fecha_fin": "2024-05-30T19:00:00",
             "descripcion": "Una exhibición de obras de artistas modernos que muestran la evolución del arte vanguardista.",
             "ubicacion": {
-              "nombre": "Galería Vanguardia",
+              "nombre_ubicacion": "Galería Vanguardia",
               "direccion": "Calle de las Vanguardias, Sevilla, España",
               "latitud": 37.391572,
               "longitud": -5.985117
@@ -340,12 +338,12 @@
           },
           {
             "id": "14",
-            "nombre": "Festival de Danza Internacional",
+            "nombre_evento": "Festival de Danza Internacional",
             "fecha_inicio": "2024-05-20T15:00:00",
             "fecha_fin": "2024-05-25T23:00:00",
             "descripcion": "Un festival que reúne a bailarines de todo el mundo para compartir sus tradiciones y estilos de danza.",
             "ubicacion": {
-              "nombre": "Teatro Internacional de Danza",
+              "nombre_ubicacion": "Teatro Internacional de Danza",
               "direccion": "Calle de la Danza, Sevilla, España",
               "latitud": 37.393358,
               "longitud": -5.985910
@@ -353,7 +351,7 @@
             "tipo": "Festival de Danza",
             "organizador": "Asociación de Danza Sevilla",
             "pagina_web": "https://www.festivaldanzasevilla.com",
-            "precio": "Varía según eventos",
+            "precio": "10",
             "contacto": {
               "email": "info@danzasevilla.com",
               "telefono": "+34 777 888 999",
@@ -366,12 +364,12 @@
           },
           {
             "id": "15",
-            "nombre": "Concierto de Música Clásica en el Palacio",
+            "nombre_evento": "Concierto de Música Clásica en el Palacio",
             "fecha_inicio": "2024-06-10T19:00:00",
             "fecha_fin": "2024-06-10T21:00:00",
             "descripcion": "Una noche especial de música clásica interpretada por talentosos músicos en el majestuoso Palacio de Sevilla.",
             "ubicacion": {
-              "nombre": "Palacio de Sevilla",
+              "nombre_ubicacion": "Palacio de Sevilla",
               "direccion": "Plaza de la Música, Sevilla, España",
               "latitud": 37.394701,
               "longitud": -5.986506
@@ -379,7 +377,7 @@
             "tipo": "Concierto",
             "organizador": "Orquesta Filarmónica de Sevilla",
             "pagina_web": "https://www.conciertomusicaclasica.com",
-            "precio": "Entrada con reserva",
+            "precio": "Entrada gratuita",
             "contacto": {
               "email": "info@musicaclasica.com",
               "telefono": "+34 111 222 333",
@@ -392,12 +390,12 @@
           },
           {
             "id": "16",
-            "nombre": "Feria del Libro de Sevilla",
+            "nombre_evento": "Feria del Libro de Sevilla",
             "fecha_inicio": "2024-07-05T10:00:00",
             "fecha_fin": "2024-07-15T20:00:00",
             "descripcion": "Una feria anual que celebra la literatura con presentaciones de libros, charlas con autores y actividades para toda la familia.",
             "ubicacion": {
-              "nombre": "Parque de la Literatura",
+              "nombre_ubicacion": "Parque de la Literatura",
               "direccion": "Avenida de los Libros, Sevilla, España",
               "latitud": 37.392408,
               "longitud": -5.983897
@@ -418,12 +416,12 @@
           },
           {
             "id": "17",
-            "nombre": "Exposición de Esculturas al Aire Libre",
+            "nombre_evento": "Exposición de Esculturas al Aire Libre",
             "fecha_inicio": "2024-08-10T09:00:00",
             "fecha_fin": "2024-08-31T18:00:00",
             "descripcion": "Una muestra de esculturas de artistas locales que embellecen los espacios públicos de la ciudad.",
             "ubicacion": {
-              "nombre": "Paseo Escultural",
+              "nombre_ubicacion": "Paseo Escultural",
               "direccion": "Avenida de las Esculturas, Sevilla, España",
               "latitud": 37.390752,
               "longitud": -5.983694
@@ -444,12 +442,12 @@
           },
           {
             "id": "18",
-            "nombre": "Festival Internacional de Cortometrajes",
+            "nombre_evento": "Festival Internacional de Cortometrajes",
             "fecha_inicio": "2024-09-15T17:00:00",
             "fecha_fin": "2024-09-20T23:00:00",
             "descripcion": "Un festival que destaca cortometrajes de diversos géneros y ofrece proyecciones y premiaciones.",
             "ubicacion": {
-              "nombre": "Teatro Corto",
+              "nombre_ubicacion": "Teatro Corto",
               "direccion": "Calle del Cortometraje, Sevilla, España",
               "latitud": 37.392090,
               "longitud": -5.984309
@@ -457,7 +455,7 @@
             "tipo": "Festival de Cine",
             "organizador": "Asociación de Cortometrajes Sevilla",
             "pagina_web": "https://www.festivalcortometrajes.com",
-            "precio": "Varía según eventos",
+            "precio": "12",
             "contacto": {
               "email": "info@cortometrajes.com",
               "telefono": "+34 333 444 555",
@@ -470,12 +468,12 @@
           },
           {
             "id": "19",
-            "nombre": "Semana de la Moda Sevilla",
+            "nombre_evento": "Semana de la Moda Sevilla",
             "fecha_inicio": "2024-10-05T10:00:00",
             "fecha_fin": "2024-10-10T22:00:00",
             "descripcion": "Una semana dedicada a la moda con desfiles de diseñadores locales e internacionales.",
             "ubicacion": {
-              "nombre": "Centro de Moda Sevilla",
+              "nombre_ubicacion": "Centro de Moda Sevilla",
               "direccion": "Avenida de la Moda, Sevilla, España",
               "latitud": 37.393001,
               "longitud": -5.982834
@@ -483,7 +481,7 @@
             "tipo": "Semana de la Moda",
             "organizador": "Asociación de Moda Sevilla",
             "pagina_web": "https://www.semanamodasevilla.com",
-            "precio": "Varía según eventos",
+            "precio": "5",
             "contacto": {
               "email": "info@semanamodasevilla.com",
               "telefono": "+34 111 222 333",
@@ -496,12 +494,12 @@
           },
           {
             "id": "20",
-            "nombre": "Feria de Arte Contemporáneo",
+            "nombre_evento": "Feria de Arte Contemporáneo",
             "fecha_inicio": "2024-11-10T11:00:00",
             "fecha_fin": "2024-11-15T20:00:00",
             "descripcion": "Una feria que exhibe obras de artistas contemporáneos emergentes y establecidos.",
             "ubicacion": {
-              "nombre": "Recinto Ferial de Arte",
+              "nombre_ubicacion": "Recinto Ferial de Arte",
               "direccion": "Calle del Arte, Sevilla, España",
               "latitud": 37.392791,
               "longitud": -5.986013
@@ -522,12 +520,12 @@
           },
           {
             "id": "21",
-            "nombre": "Feria del Arte Moderno",
+            "nombre_evento": "Feria del Arte Moderno",
             "fecha_inicio": "2024-10-10T10:00:00",
             "fecha_fin": "2024-10-15T20:00:00",
             "descripcion": "Una feria que muestra la creatividad del arte moderno con obras de artistas contemporáneos.",
             "ubicacion": {
-              "nombre": "Centro de Convenciones de Arte",
+              "nombre_ubicacion": "Centro de Convenciones de Arte",
               "direccion": "Calle del Arte Moderno, Madrid, España",
               "latitud": 40.420229,
               "longitud": -3.705280
@@ -535,7 +533,7 @@
             "tipo": "Feria de Arte",
             "organizador": "Asociación de Arte Moderno Madrid",
             "pagina_web": "https://www.feriaartemodernomadrid.com",
-            "precio": "Entrada con coste variable",
+            "precio": "5",
             "contacto": {
               "email": "info@arte.moderno.madrid.com",
               "telefono": "+34 111 222 333",
@@ -548,12 +546,12 @@
           },
           {
             "id": "22",
-            "nombre": "Concierto de Rock en el Estadio",
+            "nombre_evento": "Concierto de Rock en el Estadio",
             "fecha_inicio": "2024-11-05T18:00:00",
             "fecha_fin": "2024-11-05T23:00:00",
             "descripcion": "Un concierto lleno de energía con bandas de rock populares actuando en un gran estadio.",
             "ubicacion": {
-              "nombre": "Estadio de Madrid",
+              "nombre_ubicacion": "Estadio de Madrid",
               "direccion": "Avenida del Rock, Madrid, España",
               "latitud": 40.453048,
               "longitud": -3.688351
@@ -561,7 +559,7 @@
             "tipo": "Concierto",
             "organizador": "Promociones Musicales Madrid",
             "pagina_web": "https://www.conciertorockmadrid.com",
-            "precio": "Entrada con coste",
+            "precio": "25",
             "contacto": {
               "email": "info@conciertorockmadrid.com",
               "telefono": "+34 444 555 666",

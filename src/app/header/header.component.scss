@@ -1,0 +1,53 @@
+.site-header {
+    display: flex;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
+}
+
+.headerLogo {
+    margin: 0.25rem;
+}
+
+
+.headerPrincipal {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerTop {
+    border-bottom: #000 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.botones {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.nav-item {
+    margin-right: 20px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
+.headerBotton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-icon {
+    height: 28px ;
+    width: 28px ;
+    font-size: 28px !important;
+}

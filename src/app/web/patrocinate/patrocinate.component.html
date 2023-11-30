@@ -1,70 +1,99 @@
 <body class="bodyPatrocinate">
-    <div class="informacion">
-        <span class="titulo_informativo" > ¡¡Patrocina tu evento!! </span>
-        <p class="texto_infomativo" style="font-weight: bold;">¿Quieres que tu evento aparezca en nuestro calendario?</p>
-        <p class="texto_infomativo">
-            Deberás de rellenar nuestro formulario y esperar un respuesta de nuestra administración. 
-            Seguidamente podras ver tu evento en nuestro calendario.
-            Recuerda dar toda la información posible, de este modo nadie llegara tarde.
-            ¡¡¡Muchas gracias!!!!
-        </p>
-    </div>
+    <mat-card class="informacion">
+        <mat-card-header>
+            <mat-card-title>¡¡Patrocina tu evento!!</mat-card-title>
+            <mat-card-subtitle>¿Quieres que tu evento aparezca en nuestro
+                calendario?</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Deberás de rellenar nuestro formulario y esperar un respuesta de
+                nuestra administración.
+                <br>
+                Seguidamente podras ver tu evento en nuestro calendario.
+                Recuerda dar toda la información posible, de este modo nadie
+                llegara
+                tarde.
+            </p>
+            <p>¡¡¡Muchas gracias!!!!</p>
+        </mat-card-content>
+    </mat-card>
     <div class="formulario">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <formly-form [form]="form" [model]="model" [fields]="fields" > </formly-form>
+        <form class="example-form" [formGroup]="form" (ngSugmit)="save($event)">
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Nombre del Evento</mat-label>
+                <input matInput placeholder="Nombre de su evento">
+            </mat-form-field>
 
-            <button type="submit" color="primary" mat-raised-button>Submit</button>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Fecha Inicio del Evento</mat-label>
+                <input matInput [matDatepicker]="pickerInicio">
+                <mat-datepicker-toggle matIconSuffix [for]="pickerInicio">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #pickerInicio></mat-datepicker>
+            </mat-form-field>
 
-            <button type="reset" color="warm" mat-raised-button>Reset</button>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Fecha Final del Evento</mat-label>
+                <input matInput [matDatepicker]="pickerFinal">
+                <mat-datepicker-toggle matIconSuffix [for]="pickerFinal">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #pickerFinal></mat-datepicker>
+            </mat-form-field>
 
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Descripción del Evento</mat-label>
+                <textarea matInput
+                    placeholder="Una pequeña descripción de su evento"></textarea>
+            </mat-form-field>
+
+            <p>Ubicación del Evento</p>
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Nombre del recinto</mat-label>
+                <input matInput
+                    placeholder="Nombre del recinto que aparece en Google Maps">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Dirección del Evento</mat-label>
+                <input matInput placeholder="Dirección de enlace de Google Maps">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Tipo de Evento</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let evento of eventos"
+                        [value]="evento.value">
+                        {{evento.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Empresa Organizadora del Evento</mat-label>
+                <input matInput placeholder="Nombre de la empresa">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+                <mat-label>Pagina Web de la Empresa</mat-label>
+                <input matInput placeholder="Pagina Web de la Empresa">
+            </mat-form-field>
+
+            <mat-chip-listbox class="example-full-width">
+                <mat-label>Precio de la entrada</mat-label>
+                <mat-chip-option>Entrada Gratuita</mat-chip-option>
+                <mat-chip-option>-10 €</mat-chip-option>
+                <mat-chip-option>10 - 25 €</mat-chip-option>
+                <mat-chip-option>+25 €</mat-chip-option>
+                <mat-chip-option>Diferentes precios</mat-chip-option>
+            </mat-chip-listbox>
+
+            
+
+            <button type="submit">Enviar</button>
+            <button tyoe="borrar">Borrar</button>
         </form>
     </div>
-    <!--
-    
-    <ng-container class="ng-container">
-        
-        <div class="registration-form">
-            <h2>Registration Form</h2>
-            <form (ngSubmit)="onSubmit()">
-                
-                <div class="form-group">
-                    <label for="firstName">Usario</label>
-                    <input type="text" id="firstName" formControlName="firstName" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Apellidos</label>
-                    <input type="text" id="lastName" formControlName="lastName" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" formControlName="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="company">Compañia</label>
-                    <input type="text" id="company" formControlName="company" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="company">Nombre del Evento</label>
-                    <input type="text" id="company" formControlName="company" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="day">Día del Evento</label>
-                    <input type="date" id="day" formControlName="day" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Hora comienzo del Evento</label>
-                    <input type="time" id="time" formControlName="time" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="duration">Duración</label>
-                    <input type="text" id="duration" formControlName="duration" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="website">Página Web</label>
-                    <input type="url" id="website" formControlName="website" class="form-control" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </ng-container>-->
 </body>

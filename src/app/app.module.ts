@@ -1,25 +1,21 @@
 import { NgModule } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
+
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './web/inicio/inicio.component';
 import { CalendarComponent } from './web/calendar/calendar.component';
-
-import { NgIconsModule } from '@ng-icons/core';
-import { heroMagnifyingGlass, heroUser } from '@ng-icons/heroicons/outline';
 import { PatrocinateComponent } from './web/patrocinate/patrocinate.component';
 import { SoporteComponent } from './web/soporte/soporte.component';
-
-import { FloatLabelType, MatFormFieldModule } from '@angular/material/form-field';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormlyModule } from '@ngx-formly/core';
-import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { MaterialModule } from './material-module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component: InicioComponent },
@@ -41,15 +37,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    [NgOptimizedImage],
-    NgIconsModule.withIcons({ heroMagnifyingGlass, heroUser }),
-    FormsModule,
-    ReactiveFormsModule,
-    FormlyModule.forRoot(),
-    FormlyBootstrapModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
