@@ -1,7 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
-import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
-import { NativeDateAdapter, DateAdapter,
-  MAT_DATE_FORMATS } from '@angular/material/core';
+import { FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import { NativeDateAdapter, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { formatDate } from '@angular/common';
 
 interface Evento {
@@ -41,24 +40,35 @@ class PickDateAdapter extends NativeDateAdapter {
 export class PatrocinateComponent implements OnInit{
  
   date : any;
-  form!: FormGroup;
+  evento!: FormGroup;
 
-  constructor() { }
+  constructor(private _formBuilder: FormBuilder) {}
 
   eventos: Evento[] = [
     {value: `Concierto`, viewValue: 'Concierto'},
-    {value: `Exposición`, viewValue: 'Exposición'},
+    {value: `Exposicion`, viewValue: 'Exposición'},
     {value: `Feria`, viewValue: 'Feria'},
     {value: `Teatro`, viewValue: 'Teatro'},
-    {value: `Carrera`, viewValue: 'Carrera'},
+    {value: `Competicion`, viewValue: 'Conpetición'},
   ]
-  
+
+  infoEvento = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  infoUbicacion = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  infoContacto = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+  isLinear = false;
+   
   ngOnInit() {
   }
 
   save(event: Event){
     event.preventDefault();
-    const value = this.form.value;
+    const value = this.evento.value;
     console.log(value);
   }
 }

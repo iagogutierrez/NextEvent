@@ -1,12 +1,13 @@
 <body class="bodyPatrocinate">
     <mat-card class="informacion">
         <mat-card-header>
-            <mat-card-title>¡¡Patrocina tu evento!!</mat-card-title>
-            <mat-card-subtitle>¿Quieres que tu evento aparezca en nuestro
-                calendario?</mat-card-subtitle>
+            <mat-card-title class="infoHeader">¡¡Patrocina tu evento!!</mat-card-title>
+            <mat-card-subtitle class="infoSubheader">
+                ¿Quieres que tu evento aparezca en nuestro calendario?
+            </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <p>
+            <p class="infoContent">
                 Deberás de rellenar nuestro formulario y esperar un respuesta de
                 nuestra administración.
                 <br>
@@ -15,85 +16,180 @@
                 llegara
                 tarde.
             </p>
-            <p>¡¡¡Muchas gracias!!!!</p>
+            <p class="infoFooter">¡¡¡Muchas gracias!!!!</p>
         </mat-card-content>
     </mat-card>
+
     <div class="formulario">
-        <form class="example-form" [formGroup]="form" (ngSugmit)="save($event)">
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Nombre del Evento</mat-label>
-                <input matInput placeholder="Nombre de su evento">
-            </mat-form-field>
+        <mat-stepper [linear]="isLinear" #stepper>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Fecha Inicio del Evento</mat-label>
-                <input matInput [matDatepicker]="pickerInicio">
-                <mat-datepicker-toggle matIconSuffix [for]="pickerInicio">
-                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-                </mat-datepicker-toggle>
-                <mat-datepicker #pickerInicio></mat-datepicker>
-            </mat-form-field>
+            <!-- PRIMER PASO -->
+            <mat-step [stepControl]="infoEvento" label="Información del Evento">
+                <form [formGroup]="evento"
+                    (ngSugmit)="save($event)">
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Fecha Final del Evento</mat-label>
-                <input matInput [matDatepicker]="pickerFinal">
-                <mat-datepicker-toggle matIconSuffix [for]="pickerFinal">
-                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-                </mat-datepicker-toggle>
-                <mat-datepicker #pickerFinal></mat-datepicker>
-            </mat-form-field>
+                    <div class="mat-grid-list tabInfo">
+                        <div class="mat-grid-list-content one">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Nombre del Evento</mat-label>
+                                <input matInput
+                                    placeholder="Nombre de su evento">
+                            </mat-form-field>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Descripción del Evento</mat-label>
-                <textarea matInput
-                    placeholder="Una pequeña descripción de su evento"></textarea>
-            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Tipo de Evento</mat-label>
+                                <mat-select>
+                                    <mat-option *ngFor="let evento of eventos"
+                                        [value]="evento.value">
+                                        {{evento.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
 
-            <p>Ubicación del Evento</p>
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Nombre del recinto</mat-label>
-                <input matInput
-                    placeholder="Nombre del recinto que aparece en Google Maps">
-            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Descripción del Evento</mat-label>
+                                <textarea matInput style="min-height: 200px;"
+                                    placeholder="Una pequeña descripción de su evento"></textarea>
+                            </mat-form-field>
+                        </div>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Dirección del Evento</mat-label>
-                <input matInput placeholder="Dirección de enlace de Google Maps">
-            </mat-form-field>
+                        <div class="mat-grid-list-content two">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Fecha Inicio del Evento</mat-label>
+                                <input matInput [matDatepicker]="pickerInicio">
+                                <mat-datepicker-toggle matIconSuffix
+                                    [for]="pickerInicio">
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #pickerInicio></mat-datepicker>
+                            </mat-form-field>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Tipo de Evento</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let evento of eventos"
-                        [value]="evento.value">
-                        {{evento.viewValue}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Fecha Final del Evento</mat-label>
+                                <input matInput [matDatepicker]="pickerFinal">
+                                <mat-datepicker-toggle matIconSuffix
+                                    [for]="pickerFinal">
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #pickerFinal></mat-datepicker>
+                            </mat-form-field>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Empresa Organizadora del Evento</mat-label>
-                <input matInput placeholder="Nombre de la empresa">
-            </mat-form-field>
+                            <mat-label class="label-chips">Precio de la entrada</mat-label>
+                            <mat-chip-listbox class="chip">
+                                <mat-chip-option>Entrada Gratuita</mat-chip-option>
+                                <mat-chip-option>-10 €</mat-chip-option>
+                                <mat-chip-option>10 - 25 €</mat-chip-option>
+                                <mat-chip-option>+25 €</mat-chip-option>
+                                <mat-chip-option>Diferentes precios</mat-chip-option>
+                            </mat-chip-listbox>
+                        </div>
+                    </div>
 
-            <mat-form-field appearance="outline" class="example-full-width">
-                <mat-label>Pagina Web de la Empresa</mat-label>
-                <input matInput placeholder="Pagina Web de la Empresa">
-            </mat-form-field>
+                    <div>
+                        <button mat-button matStepperNext>
+                            <mat-icon>arrow_forward</mat-icon>
+                        </button>
+                    </div>
+                </form>
+            </mat-step>
 
-            <mat-chip-listbox class="example-full-width">
-                <mat-label>Precio de la entrada</mat-label>
-                <mat-chip-option>Entrada Gratuita</mat-chip-option>
-                <mat-chip-option>-10 €</mat-chip-option>
-                <mat-chip-option>10 - 25 €</mat-chip-option>
-                <mat-chip-option>+25 €</mat-chip-option>
-                <mat-chip-option>Diferentes precios</mat-chip-option>
-            </mat-chip-listbox>
+            <!-- SEGUNDO PASO -->
+            <mat-step [stepControl]="infoUbicacion"
+                label="Ubicación del Evento">
+                <form [formGroup]="infoEvento" class="example-form">
+                    <div class="tabUbi">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nombre del recinto</mat-label>
+                            <input matInput
+                                placeholder="Nombre del recinto que aparece en Google Maps">
+                                <mat-hint>Nombre exacto que aparece en Google Maps</mat-hint>
+                        </mat-form-field>
 
-            
+                        <mat-form-field appearance="outline">
+                            <mat-label>Dirección del Evento</mat-label>
+                            <input matInput
+                                placeholder="Dirección de enlace de Google Maps">
+                                <mat-hint>URL de dirección exacta en Google Maps</mat-hint>
+                        </mat-form-field>
+                    </div>
+                </form>
+                <div>
+                    <button mat-raised-button matStepperPrevious>
+                        <mat-icon>arrow_back</mat-icon>
+                    </button>
+                    <button mat-raised-button matStepperNext>
+                        <mat-icon>arrow_forward</mat-icon>
+                    </button>
+                </div>
+            </mat-step>
 
-            <button type="submit">Enviar</button>
-            <button tyoe="borrar">Borrar</button>
-        </form>
+            <!-- Tercer PASO -->
+            <mat-step [stepControl]="infoContacto"
+                label="Contacto de la Empresa">
+                <form class="example-form" [formGroup]="infoEvento">
+                    <div class="tabCont">
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Empresa Organizadora del Evento</mat-label>
+                                <input matInput placeholder="Nombre de la empresa">
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Compra de entradas</mat-label>
+                                <input matInput
+                                    placeholder="Pagina Web donde comprar las entradas">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email de la Empresa</mat-label>
+                                <input matInput
+                                    placeholder="Email de Contacto de la Empresa">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Teléfono de la Empresa</mat-label>
+                                <input matInput
+                                    placeholder="Teléfono de Contacto de la Empresa">
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Instagram de la Empresa</mat-label>
+                                <input matInput
+                                    placeholder="Instagram de la Empresa">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>TikTok de la Empresa</mat-label>
+                                <input matInput
+                                    placeholder="TikTok de la Empresa">
+                            </mat-form-field>
+                        </div>
+                        
+                        <div>
+                            <button mat-stroked-button matStepperPrevious>
+                                <mat-icon>arrow_back</mat-icon>
+                            </button>
+                            <button mat-stroked-button matStepperNext>
+                                <mat-icon>arrow_forward</mat-icon>
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </mat-step>
+
+            <!-- Enviar PASO -->
+            <mat-step label="Hecho">
+                <div class="tabBotones">
+                    <button mat-stroked-button color="primary">Enviar</button>
+                    <button mat-stroked-button color="primary">Primary</button>
+
+                </div>
+                <div>
+                    <button mat-button matStepperPrevious>
+                        <mat-icon>arrow_back</mat-icon>
+                    </button>
+                </div>
+            </mat-step>
+
+        </mat-stepper>
     </div>
+
 </body>

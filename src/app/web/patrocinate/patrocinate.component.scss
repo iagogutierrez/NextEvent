@@ -1,40 +1,101 @@
-.bodyPatrocinate {
-    display: flex;
-    gap: 2rem;
-}
-.informacion {
-    min-width: none;
-    max-width: 30%;
-}
-
-.formulario {
-}
-
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 body {
-    padding: 10px;
+  padding: 10px;
 }
 
-form .mat-raised-button {
-    margin-right: 8px;
+.bodyPatrocinate {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
 }
 
-formly-form {
-    border: none;
-    background: none;
-    padding: 0;
-    outline: none;
-    font: inherit;
-    text-align: center;
-    color: currentColor;
+// Estilo de información de pestaña
+.informacion {
+  margin-top: 1.2rem;
 }
 
-.example-form {
-    min-width: 150px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-  }
+.infoHeader {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.infoSubheader {
+  font-size: 18px;
+  color: #666; 
+  margin-bottom: 8px;
+}
+
+.infoContent {
+  font-size: 16px;
+  color: #444; 
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.infoFooter {
+  font-size: 14px;
+  color: #888; 
+}
+
+// Estilo de formulario de pestaña
+.formulario {
+  height: 100%;
+  width: 100%;
+  margin-right: 0.7rem;
+}
+
+// Tab Informacion del Evento
+.mat-grid-list {
+  display: flex;
+  gap: 5px;
+}
+
+.mat-grid-list-content {
+  display: grid;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 5px;
+}
+
+.one {
+  width: 65%;
+}
+
+.two {
+  width: 35%;
+}
+
+::ng-deep .mdc-evolution-chip-set__chips{
+  flex-direction: column !important;
+}
+
+.label-chips {
+  font-family: var(--mdc-outlined-text-field-label-text-font);
+  font-size: var(--mdc-outlined-text-field-label-text-size);
+  font-weight: var(--mdc-outlined-text-field-label-text-weight);
+  letter-spacing: var(--mdc-outlined-text-field-label-text-tracking);
+  margin: 5px;
+}
+
+// Tab Ubicacion del Evento
+.tabUbi {
+  display: grid;
+}
+
+mat-hint{
+  font-size: 9px;
+  margin-top: -6px;
+}
+
+// Tab Contacto del Evento
+.tabCont {
+  display: grid;
+}
+
+
+
+
